@@ -5,7 +5,7 @@ import shutil
 
 # Configuración
 MAILDIR_BASE = "/data/domains"
-WEBHOOK_URL = "https://tu-webhook.com/endpoint"
+WEBHOOK_URL = "https://minero-criptoexceleuropa.eu.pythonanywhere.com/mails/nuevo"
 LIMIT = 50
 
 def get_new_emails():
