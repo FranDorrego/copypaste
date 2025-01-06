@@ -38,7 +38,9 @@ try:
     conn.commit()
     print(f"Cuenta creada: {nueva_cuenta}")
     print(f"Contraseña: {password}")
-except sqlite3.IntegrityError:
-    print("Error: La cuenta ya existe.")
+except sqlite3.IntegrityError as e:
+    print("Error: La cuenta ya existe.", e)
+except Exception as e:
+    print('Erorr grande', e)
 finally:
     conn.close()
