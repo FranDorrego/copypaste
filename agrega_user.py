@@ -34,7 +34,7 @@ cursor = conn.cursor()
 
 # Inserta el nuevo usuario en la tabla "users"
 try:
-    cursor.execute("INSERT INTO users (address, password) VALUES (?, ?)", (nueva_cuenta, hashed_password))
+    cursor.execute("INSERT INTO users (username, address, password) VALUES (?, ?, ?)", (nueva_cuenta, nueva_cuenta, hashed_password))
     conn.commit()
     print(f"Cuenta creada: {nueva_cuenta}")
     print(f"Contraseña: {password}")
